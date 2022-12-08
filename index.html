@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Library</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div id="input">
+            <form id="bookInput">
+                <div id="title">
+                    <label for="bookTitle" class="inputLabel">Book title</label>
+                    <input type="text" id="bookTitle" name="bookTitle" />
+                </div>
+                <div id="author">
+                    <label for="bookAuthor" class="inputLabel">Author</label>
+                    <input type="text" name="bookAuthor" id="bookAuthor">
+                </div>
+                <div id="pageCount">
+                    <label for="bookPageCount" class="inputLabel">Page count</label>
+                    <input type="text" name="bookPageCount" id="bookPageCount" />
+                </div>
+                <div id="publisher">
+                    <label for="publisher" class="inputLabel">Publisher</label>
+                    <input type="text" name="bookPublisher" id="bookPublisher" />
+                </div>
+                <div id="genre">
+                    <label for="bookGenre" class="inputLabel">Genre</label>
+                    <input type="text" id="bookGenre" name="bookGenre" />
+                </div>
+            </form>
+            <button id="register">Add book</button>
+        </div>
+        <div id="display">
+            <button id="refresh">Refresh</button>
+            <div id="showcase"></div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
