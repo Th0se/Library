@@ -1,11 +1,12 @@
 let library = [];
 
+
 function Book (title, author, pageCount, publisher, genre) {
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount;
-    this.publisher = publisher;
-    this.genre = genre;
+    this.Title = title;
+    this.Author = author;
+    this.PageCount = pageCount;
+    this.Publisher = publisher;
+    this.Genre = genre;
 }
 
 
@@ -31,9 +32,21 @@ register.addEventListener('click', () => {
 const showCase = document.querySelector(`#showcase`);
 const refresh = document.querySelector(`#refresh`);
 refresh.addEventListener('click', () => {
-    for (book in library) {
+    while (showCase.firstChild) {
+        showCase.removeChild(showCase.firstChild);
+    };
+    for (let book in library) {   
         let entry = document.createElement(`div`);
-        entry.innerHTML = book;
+        let detail = [];
+        for (let i in library[book]) {
+            detail.push(library[book][i])
+        }
+        for (let i in detail) {
+            let info = document.createElement(`p`);
+            info.textContent = detail[i];
+            entry.appendChild(info);
+        }
+        console.log(detail);
         showCase.appendChild(entry);
     }
 });
