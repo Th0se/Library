@@ -10,35 +10,44 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1>Library</h1>
+
+    </header>
     <main>
         <div id="input">
             <form id="bookInput">
-                <div id="title">
+                <fieldset id="title">
                     <label for="bookTitle" class="inputLabel">Book title</label>
                     <input type="text" id="bookTitle" name="bookTitle" />
-                </div>
-                <div id="author">
+                </fieldset>
+                <fieldset id="author">
                     <label for="bookAuthor" class="inputLabel">Author</label>
                     <input type="text" name="bookAuthor" id="bookAuthor">
-                </div>
-                <div id="pageCount">
+                </fieldset>
+                <fieldset id="pageCount">
                     <label for="bookPageCount" class="inputLabel">Page count</label>
                     <input type="text" name="bookPageCount" id="bookPageCount" />
-                </div>
-                <div id="publisher">
+                </fieldset>
+                <fieldset id="publisher">
                     <label for="publisher" class="inputLabel">Publisher</label>
                     <input type="text" name="bookPublisher" id="bookPublisher" />
-                </div>
-                <div id="genre">
+                </fieldset>
+                <fieldset id="genre">
                     <label for="bookGenre" class="inputLabel">Genre</label>
                     <input type="text" id="bookGenre" name="bookGenre" />
-                </div>
+                </fieldset>
+                <fieldset id="read">
+                    <label for="bookRead" class="inputLabel">Read</label>
+                    <select id="bookRead" name="bookRead">
+                        <option value="read">Read</option>
+                        <option value="unread">Not read</option>
+                    </select>
+                </fieldset>
             </form>
             <button id="register">Add book</button>
         </div>
         <div id="display">
-            <button id="refresh">Refresh</button>
             <div id="showcase"></div>
         </div>
     </main>
