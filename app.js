@@ -49,3 +49,13 @@ register.addEventListener('click', () => {
         showCase.appendChild(entry);
     }
 });
+
+const openPopUp = document.querySelector(`#openPopUp`);
+const closePopUp = document.querySelector(`#closePopUp`);
+const modal = document.querySelector(`#input`);
+openPopUp.addEventListener(`click`, () => {
+    modal.classList.add(`active`);
+});
+closePopUp.addEventListener(`click`, () => {
+    modal.classList.remove(`active`);
+});
