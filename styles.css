@@ -1,3 +1,24 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #075985;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+header > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: 2rem;
+    background-color: #075985c4;
+}
+
 #openPopUp {
     position: fixed;
     right: 1rem;
@@ -8,6 +29,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#input {
+    background-color: rgb(19, 156, 156);
 }
 
 .modal {
@@ -23,4 +48,29 @@
 
 #Input {
     width: clamp(250px, 70% 600px);
+}
+
+#showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-template-rows: repeat(auto-fit, 20rem);
+    grid-gap: 2rem;
+}
+
+.book {
+    border-left: 1rem solid #1c1917;
+    border-top: 1rem solid #1c1917;
+    border-right: 1rem solid #1c1917;
+    border-bottom: 1rem solid #1c1917;
+    background-color: #0c4a6e;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.book p {
+    background-color: #a3a3a3;
+    width: 100%;
 }

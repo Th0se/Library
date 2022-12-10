@@ -38,13 +38,13 @@ register.addEventListener('click', () => {
         entry.classList.add(`book`);
         let detail = [];
         for (let i in library[book]) {
-            detail.push(library[book][i])
-        }
+            detail.push(library[book][i]);
+        };
         for (let i in detail) {
             let info = document.createElement(`p`);
             info.textContent = detail[i];
             entry.appendChild(info);
-        }
+        };
         console.log(detail);
         showCase.appendChild(entry);
     }
