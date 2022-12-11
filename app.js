@@ -52,10 +52,10 @@ register.addEventListener('click', () => {
         readBook.textContent = `Read book`;
         readBook.addEventListener(`click`, () => {
             entry.removeChild(entry.lastChild);
-            detail[5] = `read`;
-            console.log(detail[5]);
+            library[book][`Read`] = `read`;
+            console.log(library[book]);
             let finalInfo = document.createElement(`p`);
-            finalInfo.textContent = detail[5];
+            finalInfo.textContent = library[book][`Read`];
             entry.appendChild(finalInfo);
         });
 
