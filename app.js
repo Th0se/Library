@@ -31,12 +31,35 @@ const showCase = document.querySelector(`#showcase`);
 const register = document.querySelector(`#register`);
 register.addEventListener('click', () => {
     addBook()
+
     while (showCase.firstChild) {
         showCase.removeChild(showCase.firstChild);
     };
-    for (let book in library) {   
+
+    for (let book in library) {
         let entry = document.createElement(`div`);
         entry.classList.add(`book`);
+
+        let remove = document.createElement(`button`);
+        remove.textContent = `Remove book`;
+        remove.addEventListener(`click`, () => {
+            entry.remove();
+            library.splice(book, 1);
+        });
+        entry.appendChild(remove);
+
+        let readBook = document.createElement(`button`);
+        readBook.textContent = `Read book`;
+        readBook.addEventListener(`click`, () => {
+            entry.removeChild(entry.lastChild);
+            detail[5] = `read`;
+            console.log(detail[5]);
+            let finalInfo = document.createElement(`p`);
+            finalInfo.textContent = detail[5];
+            entry.appendChild(finalInfo);
+        });
+
+        entry.appendChild(readBook);
         let detail = [];
         for (let i in library[book]) {
             detail.push(library[book][i]);
@@ -46,16 +69,10 @@ register.addEventListener('click', () => {
             info.textContent = detail[i];
             entry.appendChild(info);
         };
-        let remove = document.createElement(`button`);
-        remove.textContent = `Remove book`;
-        remove.addEventListener(`click`, () => {
-            entry.remove();
-            library.splice(book, 1);
-        });
-        entry.appendChild(remove);
         console.log(detail);
+        console.log(detail[5]);
         showCase.appendChild(entry);
-    }
+    };
 });
 
 const openPopUp = document.querySelector(`#openPopUp`);
