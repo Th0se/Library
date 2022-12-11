@@ -1,4 +1,5 @@
 let library = [];
+let bookItem = 0;
 
 
 function Book (title, author, pageCount, publisher, genre, read) {
@@ -45,6 +46,13 @@ register.addEventListener('click', () => {
             info.textContent = detail[i];
             entry.appendChild(info);
         };
+        let remove = document.createElement(`button`);
+        remove.textContent = `Remove book`;
+        remove.addEventListener(`click`, () => {
+            entry.remove();
+            library.splice(book, 1);
+        });
+        entry.appendChild(remove);
         console.log(detail);
         showCase.appendChild(entry);
     }
