@@ -2,13 +2,15 @@ let library = [];
 let bookItem = 0;
 
 
-function Book (title, author, pageCount, publisher, genre, read) {
-    this.Title = title;
-    this.Author = author;
-    this.PageCount = pageCount;
-    this.Publisher = publisher;
-    this.Genre = genre;
-    this.Read = read;
+class Book {
+    constructor(title, author, pageCount, publisher, genre, read) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+        this.publisher = publisher;
+        this.genre = genre;
+        this.read = read;
+    }
 }
 
 
